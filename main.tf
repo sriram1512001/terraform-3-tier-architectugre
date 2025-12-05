@@ -188,16 +188,16 @@ resource "aws_instance" "appserver2" {
   }
 }
 
-resource "aws_db_instance" "default" {
-  allocated_storage    = 10
-  db_name              = "mydb"
-  engine               = "mysql"
-  engine_version       = "8.0.35"
-  instance_class       = "db.t3.micro"
-  username             = "admin"
-  password             = "Sriram#123568i"
-  skip_final_snapshot  = true
-}
+#resource "aws_db_instance" "default" {
+#  allocated_storage    = 10
+#  db_name              = "mydb"
+#  engine               = "mysql"
+#  engine_version       = "8.0.35"
+#  instance_class       = "db.t3.micro"
+#  username             = "admin"
+#  password             = "Sriram#123568i"
+#  skip_final_snapshot  = true
+#}
 
 resource "aws_db_subnet_group" "default" {
   name       = "main"
