@@ -138,7 +138,7 @@ resource "aws_instance" "webserver1" {
   ami                    = "ami-0f00d706c4a80fd93"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1a"
-  key_name               = "rahull"
+  key_name               = "mumbai"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
   subnet_id              = aws_subnet.web-subnet-1.id
   user_data              = "${file("apache.sh")}"
@@ -152,7 +152,7 @@ resource "aws_instance" "webserver2" {
   ami                    = "ami-0f00d706c4a80fd93"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1b"
-  key_name               = "rahull"
+  key_name               = "mumbai"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
   subnet_id              = aws_subnet.web-subnet-2.id
   user_data              = "${file("apache.sh")}"
@@ -167,7 +167,7 @@ resource "aws_instance" "appserver1" {
   ami                    = "ami-0f00d706c4a80fd93"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1a"
-  key_name               = "rahull"
+  key_name               = "mumbai"
   vpc_security_group_ids = [aws_security_group.appserver-sg.id]
   subnet_id              = aws_subnet.application-subnet-1.id
   tags = {
@@ -179,7 +179,7 @@ resource "aws_instance" "appserver2" {
   ami                    = "ami-0f00d706c4a80fd93"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1b"
-  key_name               = "rahull"
+  key_name               = "mumbai"
   vpc_security_group_ids = [aws_security_group.appserver-sg.id]
   subnet_id              = aws_subnet.application-subnet-2.id
 
@@ -195,7 +195,7 @@ resource "aws_db_instance" "default" {
   engine_version       = "8.0.35"
   instance_class       = "db.t3.micro"
   username             = "admin"
-  password             = "Raham#123568i"
+  password             = "Sriram#123568i"
   skip_final_snapshot  = true
 }
 
@@ -378,5 +378,5 @@ default = ["userone", "usertwo", "userthree", "userfour"]
 }
 
 resource "aws_iam_group" "two" {
-name = "devopswithawsbyrahamshaik"
+name = "devopswithawsbysriram"
 }
